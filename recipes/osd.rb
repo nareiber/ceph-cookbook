@@ -142,7 +142,7 @@ else
         service_name 'ceph'
       end
       action [:enable, :start]
-      supports :restart => true
+      supports :restart => true, :status => true
     end
   else
     Log.info('node["ceph"]["osd_devices"] empty')
